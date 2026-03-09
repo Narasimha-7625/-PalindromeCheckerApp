@@ -1,18 +1,23 @@
-public class PalindromeCheckerApp {
+public class UseCase2PalindromeCheckerApp {
 
-    // Main method - Entry point of the Java application
     public static void main(String[] args) {
 
-        // Welcome Message
-        System.out.println("===================================");
-        System.out.println("     Welcome to Palindrome Checker ");
-        System.out.println("===================================");
+        // Hardcoded string
+        String word = "madam";
 
-        // Application Details
-        System.out.println("Application Name : Palindrome Checker App");
-        System.out.println("Application Version : v1.0");
+        // Reverse the string
+        String reversed = "";
 
-        // Startup Message
-        System.out.println("Application started successfully...");
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check palindrome using if-else
+        if (word.equals(reversed)) {
+            System.out.println("The word '" + word + "' is a Palindrome.");
+        } else {
+            System.out.println("The word '" + word + "' is NOT a Palindrome.");
+        }
+
     }
 }
